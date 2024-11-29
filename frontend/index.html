@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - Farmacia</title>
+    <title>Farmacia del Ministerio de Salud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+<header id="top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logoms" src="./public/minist-logo.jpg"></a>
+            <div class="mt-4">
+                <img class="carrito" src="./public/carrito-compras.png">
+                <button id="ver-carrito" class="btn btn-primary">Ver Carrito</button>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bienvenidos a la Farmacia del <span class="icon">MS!</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <div class="container mt-5">
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <label for="obra-social" class="form-label"><h4>Categorías</h4></label>
+                            <select id="obra-social" class="form-select">
+                                <option value="">Todas</option>
+                                <option value="Antibióticos">Antibióticos</option>
+                                <option value="Antifebriles">Antifebriles</option>
+                                <option value="Analgésicos">Analgésicos</option>
+                                <option value="Benzodiacepinas">Benzodiacepinas</option>
+                                <option value="Inhibidores">Inhibidores</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="obra-social" class="form-label"><h4>Obras Sociales</h4></label>
+                            <select id="obra-social" class="form-select">
+                                <option value="">Todas</option>
+                                <option value="OSDE">OSDE</option>
+                                <option value="Swiss Medical">Swiss Medical</option>
+                                <option value="PAMI">PAMI</option>
+                                <option value="Particular">Particular</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="descuento" class="form-label"><h4>Formas de pago</h4></label>
+                            <select id="descuento" class="form-select">
+                                <option value="todas las opciones">Opciones</option>
+                                <option value="efectivo">Contado/Efectivo (10% descuento)</option>
+                                <option value="tarjeta">Tarjeta</option>
+                                <option value="débito">Débito</option>
+                                <option value="transfqr">Transferencia/QR</option>
+                            </select>
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 <body>
-    <script src="app.js"></script>
+    <div class="index">
+        <main id="product-cards" class="container"></main>
+        <div class="container" id="product-cards">
+        </div>
+        <div id="product-cards"></div>
+        <div id="form-container"></div>
+    </div>
+    </div>
+        <div class="col-auto">
+    </div>
+<footer class="footer">
+    <h4>Ministerio de Salud</h4>
+    <div>
+        <a href="https://es-la.facebook.com/MinSalCba/" target="_blank"><img src="./public/facebook.png"
+                alt="Facebook"></a>
+        <a href="https://www.instagram.com/minsaludcba/?hl=es-la" target="_blank"><img src="./public/instagram.png"
+                alt="Instagram"></a>
+        <a href="https://x.com/minsaludcba" target="_blank"><img src="./public/twiter.png" alt="Equis"></a>
+        <a href="https://www.youtube.com/channel/UC_IxzU-al-F-FCJXlYjWp2w/featured" target="_blank"><img
+                src="./public/youtube.png" alt="YouTube"></a>
+        <a href="#top">Inicio</a></body>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
