@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <img src = "${producto.img}"/>
+            <img src = "${producto.img}" alt="${producto.nombre}"/>
             <h3>${producto.nombre}</h3>
             <h5>(${producto.categoria})</h5>
             <p>Principio Activo: ${producto.principioActivo} ${producto.presentacion}</></p>
