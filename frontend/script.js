@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     const productos = [
+
         new ProductoFarmacia(1, "./public/amoxidal.jpg", "Amoxidal", "Antibióticos", "Amoxicilina", "500mg", 5080, 3100, 30),
         new ProductoFarmacia(2, "./public/novalgina.jpg", "Novalgina", "Antifebriles", "Dipirona sódica", "50mg/ml", 8699, null, 12),
         new ProductoFarmacia(3, "./public/actron.jpg", "Actron", "Analgésicos", "Ibuprofeno", "600mg", 6599, 4669, 18),
@@ -27,13 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('product-cards');
     const carrito = [];
-    renderProductos(productos);
+    const selectCategorias = document.getElementById('category-filter');
+    const botonesCategorias = document.querySelectorAll('.boton-categoria');
     
-    function filtrarProductos(categoria) {
-        return categoria === '' || categoria === 'todos'
-            ? productos
-            : productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
-    }
+
+    renderProductos(productos);
+        
     function renderProductos(productosFiltrados) {
         container.innerHTML = '';
         productosFiltrados.forEach(({id, img, nombre, categoria, principioActivo, presentacion, precioNormal, precioOferta, stock }) => {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    const botonesCategorias = document.querySelectorAll('.boton-categoria');
+    
     botonesCategorias.forEach(boton => {
         boton.addEventListener('click', () => {
             const categoria = boton.id;
@@ -71,20 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    const selectCategorias = document.getElementById('category-filter');
+    
     selectCategorias.addEventListener('change', () => {
         const categoriaSeleccionada = selectCategorias.value;
         const productosFiltrados = filtrarProductos(categoriaSeleccionada);
         renderProductos(productosFiltrados);
     });
-
+    function filtrarProductos(categoria) {
+        return categoria === '' || categoria === 'todos'
+            ? productos
+            : productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
+    }
+    
     function agregarProductoAlCarrito(e) {
         const productId = parseInt(e.target.dataset.id);
         const cantidadInput = document.getElementById(`cantidad-${id}`);
         const cantidad = parseInt(cantidadInput.value);
         if (cantidad > 0) {
-            const producto = productos.find(p => p.id === productId);
+            const producto = productos.find(item => item.id === productId);
             if (producto.stock >= cantidad) {
                 const productoEnCarrito = carrito.find(item => item.id === productId);
                 if (productoEnCarrito) {
@@ -95,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 producto.stock -= cantidad;
                 cantidadInput.max = producto.stock;
                 cantidadInput.value = Math.min(cantidad, producto.stock);
+                
                 guardarCarrito();
                 mostrarToast(`${producto.nombre} agregado al carrito (${cantidad} unidades).`, 'success');
             } else {
@@ -107,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.classList.contains('agregar-carrito')) {
             agregarProductoAlCarrito(e);  
         }
-        cargarCarrito();
     });
 
     function renderCarrito() {
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return; 
         }
         const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        numerito.innerText = totalCantidad;
         let carritoContent = `<span class="badge bg-danger rounded-pill">${totalCantidad}</span>`;
         carritoContent += carrito.map(item => `<p class="carrito-item">${item.nombre} (${item.cantidad})</p>`).join('');
         carritoContainer.innerHTML = carritoContent;
@@ -143,19 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         }).showToast();
     }
-    function guardarCarrito() {
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-    }
-    function actualizarNumerito() {
-        let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-        numerito.innerText = nuevoNumerito;
-    }
     function cargarCarrito() {
         const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
         carrito.push(...carritoGuardado);
         renderCarrito();
     }
-    actualizarNumerito();
+    function guardarCarrito() {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
     document.getElementById('finalizar-compra').addEventListener('click', () => {
         Swal.fire({
             title: 'Compra realizada!',
