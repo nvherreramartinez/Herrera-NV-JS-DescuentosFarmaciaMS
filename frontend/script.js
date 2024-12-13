@@ -156,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCarrito();
     }
     actualizarNumerito();
-    
     document.getElementById('finalizar-compra').addEventListener('click', () => {
         Swal.fire({
             title: 'Compra realizada!',
