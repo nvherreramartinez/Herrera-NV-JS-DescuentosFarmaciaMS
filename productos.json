@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Amoxidal",
+        "category": "Antibióticos",
+        "principioActivo": "Amoxicilina",
+        "presentacion": "500mg",
+        "stock": 10,
+        "precioNormal": 5080,
+        "precioOferta": 3100,
+        "img": "https://i.postimg.cc/286CZVsn/amoxidal.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Novalgina",
+        "category": "Antifebriles",
+        "principioActivo": "Dipirona sódica",
+        "presentacion": "50mg/ml",
+        "stock": 8,
+        "precioNormal": 8699,
+        "precioOferta": null,
+        "img": "https://i.postimg.cc/Mp8GCWc4/novalgina.png"
+    },
+    {
+        "id": 3,
+        "name": "Actron",
+        "category": "Analgésicos",
+        "principioActivo": "Ibuprofeno",
+        "presentacion": "600mg",
+        "stock": 20,
+        "precioNormal": 6599,
+        "precioOferta": 4669,
+        "img": "https://i.postimg.cc/VvZYZCrQ/actron.png"
+    },
+    {
+        "id": 4,
+        "name": "Tafirol",
+        "category": "Analgésicos",
+        "principioActivo": "Paracetamol",
+        "presentacion": "500mg",
+        "stock": 50,
+        "precioNormal": 2560,
+        "precioOferta": null,
+        "img": "https://i.postimg.cc/SsdpXhVZ/tafirol.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Dipirona Klonal",
+        "category": "Antifebriles",
+        "principioActivo": "Dipirona",
+        "presentacion": "250mg",
+        "stock": 10,
+        "precioNormal": 2899,
+        "precioOferta": null,
+        "img": "https://i.postimg.cc/wMrGyVH0/dipirona-klonal.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Azibiotic",
+        "category": "Antibióticos",
+        "principioActivo": "Azitromicina",
+        "presentacion": "500mg",
+        "stock": 2,
+        "precioNormal": 14599,
+        "precioOferta": 7000,
+        "img": "https://i.postimg.cc/cC5ymBpw/azibiotic.png"
+    },
+    {
+        "id": 7,
+        "name": "Rivotril",
+        "category": "Benzodiacepinas",
+        "principioActivo": "Clonazepam",
+        "presentacion": "0,5mg",
+        "stock": 2,
+        "precioNormal": 30599,
+        "precioOferta": 3100,
+        "img": "https://i.postimg.cc/7Lv4dXfN/rivotril.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Tensium",
+        "category": "Benzodiacepinas",
+        "principioActivo": "Alprazolam",
+        "presentacion": "0,5mg",
+        "stock": 2,
+        "precioNormal": 34599,
+        "precioOferta": 19000,
+        "img": "https://i.postimg.cc/d30crxxJ/tensium.png"
+    },
+    {
+        "id": 9,
+        "name": "Fabogesic",
+        "category": "Analgésicos",
+        "principioActivo": "Ibuprofeno",
+        "presentacion": "400mg",
+        "stock": 30,
+        "precioNormal": 2499,
+        "precioOferta": null,
+        "img": "https://i.postimg.cc/hP5cbKn6/fabogesic.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Aziatop",
+        "category": "Inhibidores",
+        "principioActivo": "Omeoprazol",
+        "presentacion": "20mg",
+        "stock": 8,
+        "precioNormal": 1459,
+        "precioOferta": null,
+        "img": "https://i.postimg.cc/nrVpTzCb/aziatop.jpg"
+    }
+]
