@@ -8,7 +8,7 @@ El siguiente E-Commerce fue pensado como una alternativa a los servicios presenc
 
 Se utilizo la app VSC para la realización del proyecto. 
 A través de la herramienta GitHub se disponibilizo la plataforma al equipo de docentes y publico interesado. 
-Con Vercel se hizo un primer deploy de la app en versión gratuita. 
+Con Netflity se hizo un primer deploy de la app en versión gratuita. 
 Se usaron servidores online para la carga de imagenes del proyecto: Postimages. 
 Se instalaron las dependencias necesarias para poder crear y ajustar cada parte de la app.
 
